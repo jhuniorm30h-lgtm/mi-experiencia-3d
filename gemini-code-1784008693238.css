@@ -1,0 +1,137 @@
+/* Reset general y optimización táctil */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #030205; /* Fondo oscuro cinematográfico */
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Contenedor del lienzo de Three.js */
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Interfaz HUD de ciencia ficción en primer plano */
+.hud-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none; /* Permite que el mouse interactúe con el 3D detrás */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Etiquetas superiores */
+.hud-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hud-tag {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  background: rgba(3, 2, 5, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.hud-tag.cyan {
+  color: #00f2fe;
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+.hud-tag.magenta {
+  color: #ff007f;
+  border-color: rgba(255, 0, 127, 0.3);
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.1);
+}
+
+/* Título central adaptado */
+.title-container {
+  text-align: center;
+  transform: translateZ(50px);
+}
+
+.main-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(45px, 8vw, 90px);
+  font-weight: 900;
+  letter-spacing: 12px;
+  background: linear-gradient(180deg, #ffffff 20%, #a6f9ff 60%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.5)) drop-shadow(0 15px 30px rgba(0, 0, 0, 0.9));
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  font-size: clamp(12px, 2.5vw, 16px);
+  font-weight: 700;
+  color: #ff007f;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 0, 127, 0.8);
+}
+
+/* Pie de página del HUD */
+.hud-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hud-line {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f2fe, transparent);
+  margin-bottom: 15px;
+}
+
+.hud-instruction {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 768px) {
+  .hud-overlay {
+    padding: 20px;
+  }
+  .hud-header {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .main-title {
+    letter-spacing: 6px;
+  }
+}

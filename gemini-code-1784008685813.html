@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Experiencia 3D Premium - Sesión 10</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Google Fonts para estilo cinematográfico futurista -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- CDNs de Dependencias Obligatorias (Versiones estables de producción) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Contenedor del render WebGL -->
+  <div id="canvas-container"></div>
+
+  <!-- HUD Frontal estilo Apple Vision Pro / Cyberpunk -->
+  <div class="hud-overlay" id="hud">
+    <div class="hud-header">
+      <span class="hud-tag magenta">SYS.STATUS: ACTIVE</span>
+      <span class="hud-tag cyan">NEURAL_LINK: 100%</span>
+    </div>
+    
+    <div class="title-container">
+      <h1 class="main-title">SESIÓN 10</h1>
+      <p class="sub-title">CORE INTERACTION INTEGRATED</p>
+    </div>
+
+    <div class="hud-footer">
+      <div class="hud-line"></div>
+      <p class="hud-instruction">MUEVE EL CURSOR PARA INTERACTUAR • HAZ CLIC PARA LIBERAR ENERGÍA</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
