@@ -50,7 +50,7 @@ function init() {
   const textureLoader = new THREE.TextureLoader();
   
   // Ruta relativa exacta según estructura especificada
-  textureLoader.load('jinnn.avif', (texture) => {
+  textureLoader.load('solo leveling.jpeg', (texture) => {
     // Configuración para evitar pixelado en renderizados de cerca
     texture.minFilter = THREE.LinearFilter;
     texture.generateMipmaps = false;
